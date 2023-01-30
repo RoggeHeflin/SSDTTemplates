@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="150" />
+		</CustomData>
+		<CustomData Category="Reference" Type="SqlSchema">
+			<Metadata Name="FileName" Value="C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\COMMON7\IDE\EXTENSIONS\MICROSOFT\SQLDB\EXTENSIONS\SQLSERVER\150\SQLSCHEMAS\MASTER.DACPAC" />
+			<Metadata Name="LogicalName" Value="master.dacpac" />
+			<Metadata Name="ExternalParts" Value="[master]" />
+			<Metadata Name="SuppressMissingDependenciesErrors" Value="False" />
+		</CustomData>
+		<CustomData Category="Reference" Type="SqlSchema">
+			<Metadata Name="FileName" Value="C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\COMMON7\IDE\EXTENSIONS\MICROSOFT\SQLDB\EXTENSIONS\SQLSERVER\150\SQLSCHEMAS\MSDB.DACPAC" />
+			<Metadata Name="LogicalName" Value="msdb.dacpac" />
+			<Metadata Name="ExternalParts" Value="[msdb]" />
+			<Metadata Name="SuppressMissingDependenciesErrors" Value="False" />
+		</CustomData>
+		<CustomData Category="Reference" Type="SqlSchema">
+			<Metadata Name="FileName" Value="D:\REPOSITORY DEVOPS\LIBRARYTEMPLATEDATABASE\LIBRARY.TEMPLATES\TRACK.SVR\BIN\DEBUG\TRACK.SVR.DACPAC" />
+			<Metadata Name="LogicalName" Value="Track.Svr.dacpac" />
+			<Metadata Name="ExternalParts" Value="[$(TrackSvr)]" />
+			<Metadata Name="SuppressMissingDependenciesErrors" Value="False" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="Track.Dbs.dll" />
+			<Metadata Name="FileName" Value="D:\REPOSITORY DEVOPS\LIBRARYTEMPLATEDATABASE\LIBRARY.TEMPLATES\TRACK.DBS\OBJ\DEBUG\TRACK.DBS.DLL" />
+			<Metadata Name="AssemblyName" Value="Track.Dbs" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\obj\Debug\Track.Dbs.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable">
+			<Metadata Name="SSISDB" Value="" />
+			<Metadata Name="TrackSvr" Value="" />
+		</CustomData>
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="RecoveryMode" Value="1" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="IsAllowSnapshotIsolation" Value="True" />
+			<Property Name="IsReadCommittedSnapshot" Value="True" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlProcedure].[track].[Insert_ProcedureLogBegin].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA['Inserts procedure begin meta data into [track].[ProcedureLogBegin].']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[track].[Insert_ProcedureLogBegin]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlProcedure].[track].[Insert_ProcedureLogEnd].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA['Inserts procedure end meta data into [track].[ProcedureLogEnd].']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[track].[Insert_ProcedureLogEnd]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlProcedure].[track].[Insert_ProcedureLogError].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA['Inserts procedure error meta data into [track].[ProcedureLogErrors].']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[track].[Insert_ProcedureLogError]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlSchema].[track].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA['Tracks database stored procedure executions.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[track]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlSchema" Name="[track]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[track].[Insert_ProcedureLogBegin]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+	SET NOCOUNT ON;
+	SET LOCK_TIMEOUT 100;
+
+	DECLARE @ErrorCode		INT				= 0;
+	DECLARE @TxnActive		VARCHAR(32)		= REPLACE(CONVERT(VARCHAR(36), NEWID(), 0), '-', '');
+	DECLARE @TxnId			BIGINT			= NULL;
+
+	BEGIN TRY
+	BEGIN TRANSACTION @TxnActive;
+	PRINT CONVERT(NCHAR(23), SYSDATETIME(), 121) + NCHAR(9) + N'Begin ' + QUOTENAME(OBJECT_SCHEMA_NAME(@ProcId)) + N'.' + QUOTENAME(OBJECT_NAME(@ProcId));
+	/*-------------------------------------------------------------------------------------------*/
+
+		INSERT INTO [$(TrackSvr)].[track].[ProcedureLogBegin]
+		(
+			[database_id],
+			[schema_id],
+			[object_id],
+
+			[NameDatabase],
+			[NameSchema],
+			[NameObject],
+
+			[SPID],
+			[NestLevel],
+			[TransactionCount]
+		)
+		SELECT
+			[database_id]		= DB_ID(),
+			[schema_id]			= SCHEMA_ID(OBJECT_SCHEMA_NAME(@ProcId)),
+			[object_id]			= @ProcId,
+
+			[NameDatabase]		= DB_NAME(),
+			[NameSchema]		= OBJECT_SCHEMA_NAME(@ProcId),
+			[NameObject]		= OBJECT_NAME(@ProcId),
+
+			[SPID]				= @@SPID,
+			[NestLevel]			= @@NESTLEVEL - 1,
+			[TransactionCount]	= @@TRANCOUNT - 1;
+
+		SET	@TxnId	= SCOPE_IDENTITY();
+
+	/*-------------------------------------------------------------------------------------------*/
+	COMMIT TRANSACTION;
+	END TRY
+	BEGIN CATCH
+
+		SET @ErrorCode = @@ERROR;
+
+		IF (XACT_STATE() = -1) ROLLBACK TRANSACTION @TxnActive;
+		IF (XACT_STATE() =  1) COMMIT TRANSACTION;
+
+		THROW;
+
+	END CATCH;
+
+	RETURN @TxnId;
+
+END;]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[bigint]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nchar]" />
+				</Entry>
+				<Entry>
+					<References Name="[track].[Insert_ProcedureLogBegin].[@ProcId]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogBegin]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogBegin].[database_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogBegin].[schema_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogBegin].[object_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogBegin].[NameDatabase]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogBegin].[NameSchema]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogBegin].[NameObject]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogBegin].[SPID]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogBegin].[NestLevel]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogBegin].[TransactionCount]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[track].[Insert_ProcedureLogBegin].[@ProcId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[track]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1555" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [track].[Insert_ProcedureLogBegin]&#xD;&#xA;(&#xD;&#xA;&#x9;@ProcId&#x9;&#x9;&#x9;&#x9;INT&#xD;&#xA;)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[track].[Insert_ProcedureLogEnd]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+	SET NOCOUNT ON;
+	SET LOCK_TIMEOUT 100;
+
+	DECLARE @ErrorCode		INT				= 0;
+	DECLARE @TxnActive		VARCHAR(32)		= REPLACE(CONVERT(VARCHAR(36), NEWID(), 0), '-', '');
+
+	BEGIN TRY
+	BEGIN TRANSACTION @TxnActive;
+	PRINT CONVERT(NCHAR(23), SYSDATETIME(), 121) + NCHAR(9) + N'End   ' + QUOTENAME(OBJECT_SCHEMA_NAME(@ProcId)) + N'.' + QUOTENAME(OBJECT_NAME(@ProcId));
+	/*-------------------------------------------------------------------------------------------*/
+
+		INSERT INTO [$(TrackSvr)].[track].[ProcedureLogEnd]
+		(
+			[ProcedureLogId]
+		)
+		SELECT
+			[ProcedureLogId] = @ProcedureLogId;
+
+	/*-------------------------------------------------------------------------------------------*/
+	COMMIT TRANSACTION;
+	END TRY
+	BEGIN CATCH
+
+		SET @ErrorCode = @@ERROR;
+
+		IF (XACT_STATE() = -1) ROLLBACK TRANSACTION @TxnActive;
+		IF (XACT_STATE() =  1) COMMIT TRANSACTION;
+
+		THROW;
+
+	END CATCH;
+
+	RETURN @ErrorCode;
+
+END;]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nchar]" />
+				</Entry>
+				<Entry>
+					<References Name="[track].[Insert_ProcedureLogEnd].[@ProcId]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogEnd]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogEnd].[ProcedureLogId]" />
+				</Entry>
+				<Entry>
+					<References Name="[track].[Insert_ProcedureLogEnd].[@ProcedureLogId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[track].[Insert_ProcedureLogEnd].[@ProcId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[track].[Insert_ProcedureLogEnd].[@ProcedureLogId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[track]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1053" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [track].[Insert_ProcedureLogEnd]&#xD;&#xA;(&#xD;&#xA;&#x9;@ProcId&#x9;&#x9;&#x9;&#x9;INT,&#xD;&#xA;&#x9;@ProcedureLogId&#x9;&#x9;INT&#xD;&#xA;)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[track].[Insert_ProcedureLogError]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+
+	SET NOCOUNT ON;
+	SET LOCK_TIMEOUT 100;
+
+	DECLARE @ErrorCode		INT				= 0;
+	DECLARE @TxnActive		VARCHAR(32)		= REPLACE(CONVERT(VARCHAR(36), NEWID(), 0), '-', '');
+
+	BEGIN TRY
+	BEGIN TRANSACTION @TxnActive;
+	PRINT CONVERT(NCHAR(23), SYSDATETIME(), 121) + NCHAR(9) + N'ERROR ' + QUOTENAME(OBJECT_SCHEMA_NAME(@ProcId)) + N'.' + QUOTENAME(OBJECT_NAME(@ProcId));
+	/*-------------------------------------------------------------------------------------------*/
+
+		INSERT INTO [$(TrackSvr)].[track].[ProcedureLogErrors]
+		(
+			[ProcedureLogId],
+
+			[ErrorNumber],
+			[ErrorSeverity],
+			[ErrorState],
+			[ErrorProcedure],
+			[ErrorLine],
+			[ErrorMessage]
+		)
+		SELECT
+			[ProcedureLogId]	= @ProcedureLogId,
+
+			[ErrorNumber]		= ERROR_NUMBER(),
+			[ErrorSeverity]		= ERROR_SEVERITY(),
+			[ErrorState]		= ERROR_STATE(),
+			[ErrorProcedure]	= COALESCE(ERROR_PROCEDURE(), 'Dynamic SQL'),
+			[ErrorLine]			= ERROR_LINE(),
+			[ErrorMessage]		= ERROR_MESSAGE();
+
+	/*-------------------------------------------------------------------------------------------*/
+	COMMIT TRANSACTION;
+	END TRY
+	BEGIN CATCH
+
+		SET @ErrorCode = @@ERROR;
+
+		IF (XACT_STATE() = -1) ROLLBACK TRANSACTION @TxnActive;
+		IF (XACT_STATE() =  1) COMMIT TRANSACTION;
+
+		THROW;
+
+	END CATCH;
+
+	RETURN @ErrorCode;
+
+END;]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nchar]" />
+				</Entry>
+				<Entry>
+					<References Name="[track].[Insert_ProcedureLogError].[@ProcId]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogErrors]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogErrors].[ProcedureLogId]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogErrors].[ErrorNumber]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogErrors].[ErrorSeverity]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogErrors].[ErrorState]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogErrors].[ErrorProcedure]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogErrors].[ErrorLine]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="Track.Svr.dacpac" Name="[$(TrackSvr)]|[track].[ProcedureLogErrors].[ErrorMessage]" />
+				</Entry>
+				<Entry>
+					<References Name="[track].[Insert_ProcedureLogError].[@ProcedureLogId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[track].[Insert_ProcedureLogError].[@ProcId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[track].[Insert_ProcedureLogError].[@ProcedureLogId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[track]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1432" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [track].[Insert_ProcedureLogError]&#xD;&#xA;(&#xD;&#xA;&#x9;@ProcId&#x9;&#x9;&#x9;&#x9;INT,&#xD;&#xA;&#x9;@ProcedureLogId&#x9;&#x9;INT&#xD;&#xA;)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+	</Model>
+</DataSchemaModel>

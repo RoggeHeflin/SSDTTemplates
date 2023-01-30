@@ -1,0 +1,45 @@
+<VSTemplate Type="Item" Version="3.0.0"
+	xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>Dimension Objects</Name>
+		<Description>Dimension Objects for SRP ancestor-descendant hierarcy - Add Dimension Folders First</Description>
+		<DefaultName>$(Dimension)Dimension</DefaultName>
+		<ProjectType>SQLDB</ProjectType>
+		<Icon>dimension.png</Icon>
+		<SortOrder>10</SortOrder>
+	</TemplateData>
+	<TemplateContent>
+
+		<ProjectItem ReplaceParameters="true" TargetFileName="Tables\$SchemaName$.$rawname$LookUp.sql"						ItemType="Table">Create Table LookUp.sql</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="Tables\$SchemaName$.$rawname$Map.sql"							ItemType="Table">Create Table Map.sql</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="Tables\$SchemaName$.$rawname$Parent.sql"						ItemType="Table">Create Table Parent.sql</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="Tables\$SchemaName$.$rawname$ParentHierarchy.sql"				ItemType="Table">Create Table Parent Hierarchy.sql</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="Tables\$SchemaName$.$rawname$ParentNest.sql"					ItemType="Table">Create Table Parent Nest.sql</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="Tables\$SchemaName$.$rawname$Bridge.sql"						ItemType="Table">Create Table Bridge.sql</ProjectItem>
+
+		<ProjectItem ReplaceParameters="true" TargetFileName="Functions\$SchemaName$.$rawname$Ancestors.sql"				ItemType="Function">Create Function Ancestors.sql</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="Functions\$SchemaName$.$rawname$Distance.sql"					ItemType="Function">Create Function Distance.sql</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="Functions\$SchemaName$.$rawname$PeersNeighbors.sql"			ItemType="Function">Create Function Peers Neighbors.sql</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="Functions\$SchemaName$.$rawname$Peers.sql"					ItemType="Function">Create Function Peers.sql</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="Functions\$SchemaName$.$rawname$ReturnId.sql"					ItemType="Function">Create Function ReturnId.sql</ProjectItem>
+
+		<ProjectItem ReplaceParameters="true" TargetFileName="Procedures\$SchemaName$.Update_$rawname$Bridge.sql"			ItemType="Procedure">Create Procedure Update Dimension Bridge.sql</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="Procedures\$SchemaName$.Update_$rawname$ParentHierarchy.sql"	ItemType="Procedure">Create Procedure Update Dimension Parent Hierarchy.sql</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="Procedures\$SchemaName$.Update_$rawname$ParentNest.sql"		ItemType="Procedure">Create Procedure Update Dimension Parent Nest.sql</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="Procedures\$SchemaName$.Update_$rawname$.sql"					ItemType="Procedure">Create Procedure Update Dimension.sql</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="Procedures\$SchemaName$.Insert_$rawname$.sql"					ItemType="Procedure">Create Procedure Insert Dimension.sql</ProjectItem>
+
+		<ProjectItem ReplaceParameters="true" TargetFileName="Views\$SchemaName$.$rawname$.sql"								ItemType="View">Create View Dimension.sql</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="Views\$SchemaName$.$rawname$Orphans.sql"						ItemType="View">Create View Orphans.sql</ProjectItem>
+
+		<ProjectItem ReplaceParameters="true" TargetFileName="insert.$SchemaName$.$rawname$.sql"							ItemType="Script">Create Script Post Deployment.sql</ProjectItem>
+		
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>Microsoft.VisualStudio.Data.Tools.Package, Version=17.0.0.0, Culture=Neutral, PublicKeyToken=b03f5f7f11d50a3a, Custom=null</Assembly>
+		<FullClassName>Microsoft.VisualStudio.Data.Tools.Package.Project.TemplateWizard</FullClassName>
+	</WizardExtension>
+	<WizardData>
+		<SqlItemType>Table</SqlItemType>
+	</WizardData>
+</VSTemplate>

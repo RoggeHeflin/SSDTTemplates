@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="150" />
+		</CustomData>
+		<CustomData Category="Reference" Type="SqlSchema">
+			<Metadata Name="FileName" Value="C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\COMMON7\IDE\EXTENSIONS\MICROSOFT\SQLDB\EXTENSIONS\SQLSERVER\150\SQLSCHEMAS\MASTER.DACPAC" />
+			<Metadata Name="LogicalName" Value="master.dacpac" />
+			<Metadata Name="ExternalParts" Value="[master]" />
+			<Metadata Name="SuppressMissingDependenciesErrors" Value="False" />
+		</CustomData>
+		<CustomData Category="Reference" Type="SqlSchema">
+			<Metadata Name="FileName" Value="C:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2022\COMMUNITY\COMMON7\IDE\EXTENSIONS\MICROSOFT\SQLDB\EXTENSIONS\SQLSERVER\150\SQLSCHEMAS\MSDB.DACPAC" />
+			<Metadata Name="LogicalName" Value="msdb.dacpac" />
+			<Metadata Name="ExternalParts" Value="[msdb]" />
+			<Metadata Name="SuppressMissingDependenciesErrors" Value="False" />
+		</CustomData>
+		<CustomData Category="Reference" Type="SqlSchema">
+			<Metadata Name="FileName" Value="D:\REPOSITORY DEVOPS\LIBRARYTEMPLATEDATABASE\LIBRARY.TEMPLATES\TRACK.SVR\BIN\DEBUG\TRACK.SVR.DACPAC" />
+			<Metadata Name="LogicalName" Value="Track.Svr.dacpac" />
+			<Metadata Name="ExternalParts" Value="[$(TrackSvr)]" />
+			<Metadata Name="SuppressMissingDependenciesErrors" Value="False" />
+		</CustomData>
+		<CustomData Category="Reference" Type="SqlSchema">
+			<Metadata Name="FileName" Value="D:\REPOSITORY DEVOPS\LIBRARYTEMPLATEDATABASE\LIBRARY.TEMPLATES\TRACK.DBS\BIN\DEBUG\TRACK.DBS.DACPAC" />
+			<Metadata Name="LogicalName" Value="Track.Dbs.dacpac" />
+			<Metadata Name="SuppressMissingDependenciesErrors" Value="False" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="Library.Development.dll" />
+			<Metadata Name="FileName" Value="D:\REPOSITORY DEVOPS\LIBRARYTEMPLATEDATABASE\LIBRARY.TEMPLATES\LIBRARY.DEVELOPMENT\OBJ\DEBUG\LIBRARY.DEVELOPMENT.DLL" />
+			<Metadata Name="AssemblyName" Value="Library.Development" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Development\obj\Debug\Library.Development.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable">
+			<Metadata Name="TrackSvr" Value="" />
+		</CustomData>
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="RecoveryMode" Value="1" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="IsAllowSnapshotIsolation" Value="True" />
+			<Property Name="IsReadCommittedSnapshot" Value="True" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlSchema" Name="[calc]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlSchema" Name="[dim]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dim].[Calendar]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dim].[Calendar].[CalendarDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[dim]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
+			<Annotation Type="SqlInlineIndexAnnotation" Disambiguator="13" />
+		</Element>
+		<Element Type="SqlColumnStoreIndex" Name="[dim].[Calendar].[CCSX_Calendar]">
+			<Property Name="IsClustered" Value="True" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dim].[Calendar].[CalendarDate]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="IndexedObject">
+				<Entry>
+					<References Name="[dim].[Calendar]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="13" />
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dim].[HierarchyPrefix]">
+			<Property Name="IsSchemaBound" Value="True" />
+			<Property Name="DoReturnNullForNullInput" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dim].[HierarchyPrefix].[@Prefix]" />
+				</Entry>
+				<Entry>
+					<References Name="[dim].[HierarchyPrefix].[@RowNum]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value><![CDATA[
+BEGIN
+
+	RETURN	REPLACE(REPLACE(@Prefix, N'└', N' '), N'├', N'│') + CASE WHEN (@RowNum = 1) THEN N' └ ' ELSE N' ├ ' END;
+
+END;]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="292" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE FUNCTION [dim].[HierarchyPrefix]&#xD;&#xA;(&#xD;&#xA;&#x9;@Prefix&#x9;&#x9;NVARCHAR(MAX),&#xD;&#xA;&#x9;@RowNum&#x9;&#x9;INT&#xD;&#xA;)&#xD;&#xA;RETURNS NVARCHAR(MAX)&#xD;&#xA;WITH SCHEMABINDING, RETURNS NULL ON NULL INPUT&#xD;&#xA;AS" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dim].[HierarchyPrefix].[@Prefix]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dim].[HierarchyPrefix].[@RowNum]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[dim]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Property Name="IsMax" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint" Name="[dim].[PKNC_Calendar]">
+			<Property Name="IsClustered" Value="False" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dim].[Calendar].[CalendarDate]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dim].[Calendar]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="12" />
+		</Element>
+		<Element Type="SqlInlineTableValuedFunction" Name="[dim].[Select_CalendarDates]">
+			<Property Name="IsSchemaBound" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dim].[Select_CalendarDates].[@DateBeg]" />
+				</Entry>
+				<Entry>
+					<References Name="[dim].[Select_CalendarDates].[CTE1].[ListDatesCte].[CalendarDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dim].[Select_CalendarDates].[@DateEnd]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dim].[Select_CalendarDates].[CalendarDate]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References Name="[dim].[Select_CalendarDates].[CTE1].[ListDatesCte].[CalendarDate]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DynamicObjects">
+				<Entry>
+					<Element Type="SqlDynamicColumnSource" Name="[dim].[Select_CalendarDates].[CTE1].[ListDatesCte]">
+						<Relationship Name="Columns">
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dim].[Select_CalendarDates].[CTE1].[ListDatesCte].[CalendarDate]">
+									<Relationship Name="ExpressionDependencies">
+										<Entry>
+											<References Name="[dim].[Select_CalendarDates].[@DateBeg]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value><![CDATA[
+(
+	WITH [ListDatesCte]
+	(
+		[CalendarDate]
+	)
+	AS
+	(
+		SELECT [CalendarDate]	= @DateBeg
+		UNION ALL
+		SELECT [CalendarDate]	= DATEADD(DAY, 1, [l].[CalendarDate])
+		FROM
+			[ListDatesCte] [l]
+		WHERE
+			([l].[CalendarDate]	< @DateEnd)
+	)
+	SELECT
+		[t].[CalendarDate]
+	FROM
+		[ListDatesCte]	[t]
+)]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="445" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE FUNCTION [dim].[Select_CalendarDates]&#xD;&#xA;(&#xD;&#xA;&#x9;@DateBeg&#x9;DATE,&#xD;&#xA;&#x9;@DateEnd&#x9;DATE&#xD;&#xA;)&#xD;&#xA;RETURNS TABLE&#xD;&#xA;WITH SCHEMABINDING&#xD;&#xA;AS RETURN" />
+							<Property Name="FooterContents" Value=";" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dim].[Select_CalendarDates].[@DateBeg]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dim].[Select_CalendarDates].[@DateEnd]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[dim]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlSchema" Name="[doc]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlView" Name="[doc].[TableProperties]">
+			<Property Name="IsMetadataReported" Value="True" />
+			<Property Name="QueryScript">
+				<Value><![CDATA[
+SELECT
+	[SchemaName]			= [s].[name],
+	[TableName]				= [t].[name],
+	[TableDescriptionName]	= [p].[name],
+	[TableDescription]		= [p].[value],
+
+	[IndexName]				= [i].[name],
+	[IndexPrimaryKey]		= IIF(([i].[is_primary_key] = 1), 'Primary', 'Unique'),
+	[UniqueKey]				= STUFF((
+								SELECT
+									N', ' + QUOTENAME([z].[name]) + IIF([y].[is_descending_key] = 0, N' ASC', N' DESC')
+								FROM
+									sys.index_columns				[y]
+								INNER JOIN
+									sys.columns						[z]
+										ON	([y].[object_id]	=	[z].[object_id])
+										AND	([y].[column_id]	=	[z].[column_id])
+								WHERE
+										([y].[object_id]			=	[i].[object_id])
+									AND	([y].[index_id]				=	[i].[index_id])
+									AND	([y].[is_included_column]	=	0)
+								ORDER BY
+									[y].[key_ordinal]	ASC
+								FOR XML PATH(N'')), 1, 2, N'')
+FROM
+	sys.schemas						[s]
+INNER JOIN
+	sys.tables						[t]
+		ON	([s].[schema_id]	=	[t].[schema_id])
+INNER JOIN
+	sys.indexes						[i]
+		ON	([t].[object_id]	=	[i].[object_id])
+INNER JOIN
+	sys.extended_properties			[p]
+		ON	([t].[object_id]	=	[p].[major_id])
+		AND	([p].[minor_id]		=	0)
+WHERE
+	([i].[is_unique]			=	1)]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[doc].[TableProperties].[SchemaName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References ExternalSource="master.dacpac" Name="[master]|[sys].[schemas].[name]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[doc].[TableProperties].[TableName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References ExternalSource="master.dacpac" Name="[master]|[sys].[tables].[name]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[doc].[TableProperties].[TableDescriptionName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References ExternalSource="master.dacpac" Name="[master]|[sys].[extended_properties].[name]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[doc].[TableProperties].[TableDescription]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References ExternalSource="master.dacpac" Name="[master]|[sys].[extended_properties].[value]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[doc].[TableProperties].[IndexName]">
+						<Relationship Name="ExpressionDependencies">
+							<Entry>
+								<References ExternalSource="master.dacpac" Name="[master]|[sys].[indexes].[name]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[doc].[TableProperties].[IndexPrimaryKey]" />
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[doc].[TableProperties].[UniqueKey]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="QueryDependencies">
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[schemas]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[tables]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[schemas].[schema_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[tables].[schema_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[indexes]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[tables].[object_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[indexes].[object_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[extended_properties]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[tables].[object_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[extended_properties].[major_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[extended_properties].[minor_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[schemas].[name]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[tables].[name]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[extended_properties].[name]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[extended_properties].[value]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[indexes].[name]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[indexes].[is_primary_key]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[index_columns]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[columns]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[index_columns].[object_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[columns].[object_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[index_columns].[column_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[columns].[column_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[columns].[name]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[index_columns].[is_descending_key]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[indexes].[object_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[index_columns].[index_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[indexes].[index_id]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[index_columns].[is_included_column]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[index_columns].[key_ordinal]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="master.dacpac" Name="[master]|[sys].[indexes].[is_unique]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References Name="[doc]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1233" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE VIEW [doc].[TableProperties]&#xD;&#xA;WITH VIEW_METADATA&#xD;&#xA;AS" />
+				<Property Name="FooterContents" Value=";" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlSchema" Name="[fact]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlSchema" Name="[rpt]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlFunction].[dim].[HierarchyPrefix].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'Returns ASCII block diagram characters for displaying lookups with parent-child relationships. Monspaced fonts provide best results.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dim].[HierarchyPrefix]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlFunction].[dim].[Select_CalendarDates].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'Selects continuous dates from @DateBeg to @DateEnd, inclusive.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dim].[Select_CalendarDates]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlSchema].[calc].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'Calculates and stores values from [fact]']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[calc]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlSchema].[dim].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'Attributes, Dimensions, and Features']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dim]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlSchema].[doc].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'Database Documentation']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[doc]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlSchema].[fact].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'Stores normalized values transferred from [stg]']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[fact]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlSchema].[rpt].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'Prepares calculated data for reporting [calc]']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[rpt]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlSchema].[stg].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'Stores raw data imported into SQL Server']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[stg]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlTableBase].[dim].[Calendar].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'Calendar table of continugous dates.']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[dim].[Calendar]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlExtendedProperty" Name="[SqlView].[doc].[TableProperties].[MS_Description]">
+			<Property Name="Value">
+				<Value><![CDATA[N'List tables and descriptions']]></Value>
+			</Property>
+			<Relationship Name="Host">
+				<Entry>
+					<References Name="[doc].[TableProperties]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlSchema" Name="[stg]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+	</Model>
+</DataSchemaModel>

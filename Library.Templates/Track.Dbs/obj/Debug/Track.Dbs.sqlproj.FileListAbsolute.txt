@@ -1,0 +1,16 @@
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\bin\Debug\Track.Dbs.dacpac
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\bin\Debug\Track.Dbs.dll
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\bin\Debug\Track.Dbs.pdb
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\bin\Debug\Track.Svr.dll
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\bin\Debug\Track.Svr.pdb
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\bin\Debug\Track.Svr.dacpac
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\bin\Debug\master.dacpac
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\bin\Debug\msdb.dacpac
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\obj\Debug\Track.Dbs.sqlproj.AssemblyReference.cache
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\obj\Debug\Track.Dbs.sqlproj.CopyComplete
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\obj\Debug\Track.Dbs.dll
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\obj\Debug\Track.Dbs.pdb
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\obj\Debug\Model.xml
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\obj\Debug\refactor.xml
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\obj\Debug\postdeploy.sql
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Track.Dbs\obj\Debug\predeploy.sql

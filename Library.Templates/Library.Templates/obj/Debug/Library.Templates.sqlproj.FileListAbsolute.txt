@@ -1,0 +1,10 @@
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates\bin\Debug\Library.Templates.dacpac
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates\bin\Debug\Library.Templates.dll
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates\bin\Debug\Library.Templates.pdb
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates\obj\Debug\Library.Templates.sqlproj.AssemblyReference.cache
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates\obj\Debug\Library.Templates.dll
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates\obj\Debug\Library.Templates.pdb
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates\obj\Debug\Model.xml
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates\obj\Debug\refactor.xml
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates\obj\Debug\postdeploy.sql
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates\obj\Debug\predeploy.sql

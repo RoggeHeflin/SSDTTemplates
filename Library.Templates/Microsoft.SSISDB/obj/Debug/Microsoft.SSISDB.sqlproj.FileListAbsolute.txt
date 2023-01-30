@@ -1,0 +1,9 @@
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Microsoft.SSISDB\bin\Debug\Microsoft.SSISDB.dacpac
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Microsoft.SSISDB\bin\Debug\Microsoft.SSISDB.dll
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Microsoft.SSISDB\bin\Debug\Microsoft.SSISDB.pdb
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Microsoft.SSISDB\bin\Debug\Microsoft.SqlServer.IntegrationServices.Server.dll
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Microsoft.SSISDB\bin\Debug\master.dacpac
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Microsoft.SSISDB\obj\Debug\Microsoft.SSISDB.sqlproj.AssemblyReference.cache
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Microsoft.SSISDB\obj\Debug\Microsoft.SSISDB.sqlproj.CopyComplete
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Microsoft.SSISDB\obj\Debug\Microsoft.SSISDB.dll
+D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Microsoft.SSISDB\obj\Debug\Microsoft.SSISDB.pdb
