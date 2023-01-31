@@ -1,7 +1,0 @@
-D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates.Extension\obj\Debug\Library.Templates.Extension.csproj.AssemblyReference.cache
-D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates.Extension\obj\Debug\_EmptyResource.resources
-D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates.Extension\obj\Debug\Library.Templates.Extension.csproj.GenerateResource.cache
-D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates.Extension\obj\Debug\Library.Templates.Extension.GeneratedMSBuildEditorConfig.editorconfig
-D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates.Extension\obj\Debug\Library.Templates.Extension.csproj.CoreCompileInputs.cache
-D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates.Extension\obj\Debug\Library.Templates.Extension.dll
-D:\Repository DevOps\LibraryTemplateDatabase\Library.Templates\Library.Templates.Extension\obj\Debug\Library.Templates.Extension.pdb
